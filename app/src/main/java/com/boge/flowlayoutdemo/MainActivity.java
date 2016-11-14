@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.boge.library.FlowLayout;
 import com.boge.library.TagAdapter;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
@@ -19,59 +19,13 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.flowLayout)
     FlowLayout flowLayout;
 
-    private String[] mDatas = new String[]{"QQ",
-            "视频",
-            "放开那三国",
-            "电子书",
-            "酒店",
-            "单机",
-            "小说",
-            "斗地主",
-            "优酷",
-            "网游",
-            "WIFI万能钥匙",
-            "播放器",
-            "捕鱼达人2",
-            "机票",
-            "游戏",
-            "熊出没之熊大快跑",
-            "美图秀秀",
-            "浏览器",
-            "单机游戏",
-            "我的世界",
-            "电影电视",
-            "QQ空间",
-            "旅游",
-            "免费游戏",
-            "2048",
-            "刀塔传奇",
-            "壁纸",
-            "节奏大师",
-            "锁屏",
-            "装机必备",
-            "天天动听",
-            "备份",
-            "网盘",
-            "海淘网",
-            "大众点评",
-            "爱奇艺视频",
-            "腾讯手机管家",
-            "百度地图",
-            "猎豹清理大师",
-            "谷歌地图",
-            "hao123上网导航",
-            "京东",
-            "有你",
-            "万年历-农历黄历",
-            "支付宝钱包"};
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         final TagAdapter<String> adapter = new TagAdapter<>(this);
-        final List<String> datas = Arrays.asList(mDatas);
+        final List<String> datas = getData();
 
         adapter.setmDataList(datas);
         flowLayout.setAdapter(adapter);
@@ -82,5 +36,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public List<String> getData(){
+        List<String> list = new ArrayList<String>();
+        list.add("艾欧尼亚");
+        list.add("祖安");
+        list.add("诺克萨斯");
+        list.add("班德尔城");
+        list.add("皮尔特沃夫");
+        list.add("战争学院");
+        list.add("巨神峰");
+        list.add("雷瑟守备");
+        list.add("裁决之地");
+        list.add("黑色玫瑰");
+        list.add("暗影岛");
+        list.add("钢铁烈阳");
+        list.add("均衡教派");
+        list.add("水晶之痕");
+        list.add("影流");
+        list.add("守望之海");
+        list.add("征服之海");
+        list.add("卡拉曼达");
+        list.add("皮城警备");
+        list.add("比尔吉沃特");
+        list.add("德玛西亚");
+        list.add("弗雷尔卓德");
+        list.add("无畏先锋");
+        list.add("恕瑞玛");
+        list.add("扭曲丛林");
+        list.add("巨龙之巢");
+        return list;
     }
 }
